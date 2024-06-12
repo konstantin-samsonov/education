@@ -4,7 +4,7 @@ import string
 from datetime import datetime, timedelta
 
 # Создаем соединение с базой данных SQLite
-conn = sqlite3.connect('db.sqlite')
+conn = sqlite3.connect('test_tasks.sqlite')
 cursor = conn.cursor()
 
 # Создаем таблицы
