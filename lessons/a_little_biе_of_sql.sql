@@ -17,6 +17,7 @@ SELECT
 FROM agg_data;
 
 
+
 /* Given a table of tweet data over a specified time period, calculate the 3-day rolling average of tweets for each user.
 Output the user ID, tweet date, and rolling averages rounded to 2 decimal places. */
 WITH
@@ -33,7 +34,9 @@ WITH
     ORDER BY user_id, tweet_date
   )
 
-SELECT * FROM agg_data;
+SELECT *
+FROM agg_data;
+
 
 
 /* Write a query that outputs the name of the credit card, and how many cards were issued in its launch month.
@@ -55,6 +58,7 @@ SELECT
 FROM agg_data
 WHERE num = 1
 ORDER BY issued_amount DESC;
+
 
 
 /* Assume you're given a table containing information on Facebook user actions.
@@ -82,7 +86,6 @@ WITH
         GROUP BY u.user_id, month
         ORDER BY u.user_id, month
     )
-
 
 SELECT
     agg.month AS month,
